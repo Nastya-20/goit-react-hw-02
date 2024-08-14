@@ -1,5 +1,6 @@
 import 'react';
 import 'react-dom';
+import 'modern-normalize';
 import './App.module.css';
 
 export default function App() {
@@ -13,9 +14,9 @@ export default function App() {
       <p>Please leave your feedback about our
         service by selecting one of the options below.
       </p>
-      <button onClick={handleClick}>Good</button>
-      <button onClick={handleClick}>Neutral</button>
-      <button onClick={handleClick}>Bad</button>
+      <button type='button' onClick={handleClick}>Good</button>
+      <button type='button' onClick={handleClick}>Neutral</button>
+      <button type='button' onClick={handleClick}>Bad</button>
       </div>
   );
 }

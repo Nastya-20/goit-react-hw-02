@@ -6,7 +6,7 @@ p {
   color: #000;
   font-size: 16px;
 }
-div > button {
+div button {
   background-color: #EFEFEF;
   width: 70px;
   height: 35px;
