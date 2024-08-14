@@ -1,7 +1,7 @@
 import 'react';
 import 'react-dom';
 import 'modern-normalize';
-import './App.module.css';
+import css from './App.module.css';
 
 export default function App() {
   const handleClick = () => {
@@ -9,14 +9,14 @@ export default function App() {
   };
 
   return (
-    <div>
-      <h1>Sip Happens Café</h1>
-      <p>Please leave your feedback about our
+    <div className={css.container}>
+      <h1 className={css.title}>Sip Happens Café</h1>
+      <p className={css.text}>Please leave your feedback about our
         service by selecting one of the options below.
       </p>
-      <button type='button' onClick={handleClick}>Good</button>
-      <button type='button' onClick={handleClick}>Neutral</button>
-      <button type='button' onClick={handleClick}>Bad</button>
+      <button className={css.btn} onClick={handleClick}>Good</button>
+      <button className={css.btn} onClick={handleClick}>Neutral</button>
+      <button className={css.btn} onClick={handleClick}>Bad</button>
       </div>
   );
 }

@@ -1,12 +1,12 @@
-h1 {
+.title {
   color: #000;
   font-size: 32px;
 }
-p {
+.text {
   color: #000;
   font-size: 16px;
 }
-div button {
+.btn {
   background-color: #EFEFEF;
   width: 70px;
   height: 35px;
