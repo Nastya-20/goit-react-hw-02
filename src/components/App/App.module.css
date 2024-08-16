@@ -1,8 +1,6 @@
-.title {
-  color: #000;
-  font-size: 32px;
-}
-.text {
-  color: #000;
-  font-size: 16px;
+.wrap {
+  width: 650px;
+  border: 1px solid #bebdbd;
+  background-color: #f7fbfd;
+  padding: 25px;
 }

@@ -1,10 +1,12 @@
 import { useState, useEffect } from 'react';
-import PropTypes from 'prop-types';
 import 'react-dom';
+import Description from '../Description/Description';
 import Feedback from '../Feedback/Feedback';
 import Options from '../Options/Options';
+import Notification from '../Notification/Notification';
 import 'modern-normalize';
 import css from './App.module.css';
+
 
 export default function App(){
   const [feedback, setFeedback] = useState({
@@ -45,26 +47,18 @@ export default function App(){
   const positivePercentage = totalFeedback > 0 ? Math.round((feedback.good / totalFeedback) * 100) : 0;
 
   return (
-    <div className={css.container}>
-      <h1 className={css.title}>Sip Happens Café</h1>
-      <p className={css.text}>Please leave your feedback about our service by selecting one of the options below.</p>
+    <div className={css.wrap}>
+      <Description />
       <Options onLeaveFeedback={updateFeedback} onResetFeedback={resetFeedback} totalFeedback={totalFeedback} />
       {totalFeedback > 0 ? (
-        <Feedback feedback={feedback} totalFeedback={totalFeedback} positivePercentage={positivePercentage} />
+      <Feedback feedback={feedback} totalFeedback={totalFeedback} positivePercentage={positivePercentage} />
       ) : (
-        <Notification message="No feedback yet" />
+      <Notification message="No feedback yet" />
       )}
     </div>
   );
 };
 
-const Notification = ({ message }) => {
-  return <p>{message}</p>;
-};
-
-Notification.propTypes = {
-  message: PropTypes.string.isRequired,
-};
 
 
 
